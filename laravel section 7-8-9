@@ -1,0 +1,72 @@
+ELOQUENT RELATIONSHIP MODEL
+---------------------------
+
+class project ectends model{
+public function user()
+{
+return $this->belongsTo(uder::class)
+}
+}
+
+user.php= return $->hasmany(article::class);
+
+from this section i was learn one to many relationship its write here hasmany.and belongsTo define that relationship matches a related table's 'id' to a 'localKey' field on 'this' model.
+
+FORIGN KEYS & DATABSE FACTORIES
+-------------------------------
+
+php artisan migrate:fresh
+php artisan tinker
+
+factory(App\user::class)->create();
+
+
+
+php artisan help make factory articlefactory
+
+factory(App\user::class)->create('title'='hi');
+
+php artisan migrate:fresh
+
+
+
+M-M RELATIONSHIP
+
+<p>
+@foreach($article->tags as $tag)
+<a href="#">{{ $tag>name}}</a>
+@endforeach
+
+
+BUILD REGERSTATION SYSTEM
+-------------------------
+
+code laravel new laarvel
+laravel6 composer require laravel/ui --dev
+laravel php artisan
+laravel php artisan help ui
+laravel php artisan vi vue --auth
+laravel npm install && npm run dev
+
+in web.php
+----------
+
+Route::get('/home','Homecontroller@index')->name('home');
+php artisan route:list
+
+laravel6 php artisan migrate
+
+Homecontroller.php
+------------------
+
+public function_construct()
+{
+$this->middleware('auth')
+}
+
+
+
+
+
+
+
